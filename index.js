@@ -1,6 +1,6 @@
 require("dotenv").config();
-require("../src/models/user");
-require("../src/models/Task");
+require("./src/models/user");
+require("./src/models/Task");
 
 const express = require("express");
 const cors = require("cors");
@@ -9,8 +9,8 @@ const mongoose = require("mongoose");
 const http = require("http");
 const socketIo = require("socket.io");
 
-const authRoutes = require("../src/routes/authRoutes");
-const taskRoutes = require("../src/routes/taskRoutes");
+const authRoutes = require("./src/routes/authRoutes");
+const taskRoutes = require("./src/routes/taskRoutes");
 
 const app = express();
 const server = http.createServer(app);
