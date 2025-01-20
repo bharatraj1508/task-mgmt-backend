@@ -31,7 +31,7 @@ router.get("/userTask", async (req, res) => {
 
       req.io.emit("tasksFetched", tasks);
     } else {
-      res.status(200).json({ message: "No records found" });
+      res.status(404).json({ message: "No records found" });
     }
   } catch (err) {
     res.status(500).send({ error: err.message });
